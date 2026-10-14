@@ -1,3 +1,4 @@
+import { PageTransition } from '../components/motion.jsx';
 import { Boxes } from 'lucide-react';
 import PageHero from '../components/PageHero.jsx';
 import ProductCard from '../components/ProductCard.jsx';
@@ -8,7 +9,7 @@ export default function Products() {
   const products = t.products;
 
   return (
-    <main>
+    <PageTransition>
       <PageHero kicker={products.kicker} title={products.title} intro={products.intro} />
       <section className="section inner-section">
         <div className="container">
@@ -18,6 +19,6 @@ export default function Products() {
           <p className="catalog-note"><Boxes size={18} aria-hidden="true" />{products.note}</p>
         </div>
       </section>
-    </main>
+    </PageTransition>
   );
 }
