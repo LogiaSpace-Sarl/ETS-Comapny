@@ -176,6 +176,7 @@ export const content = {
       success: "Si votre messagerie ne s'est pas ouverte, écrivez-nous directement à {email} ou via WhatsApp.",
       sideNote: 'Une réponse claire et adaptée à votre demande.',
       quoteFor: 'Demande de devis : {item}',
+      callNow: 'Appeler',
     },
     // TODO(client): validate these answers (pro forma, delivery outside Bafoussam).
     faq: {
@@ -381,6 +382,7 @@ export const content = {
       success: "If your email app did not open, write to us directly at {email} or via WhatsApp.",
       sideNote: 'A clear response tailored to your request.',
       quoteFor: 'Quote request: {item}',
+      callNow: 'Call us',
     },
     faq: {
       kicker: 'Frequently asked questions',
