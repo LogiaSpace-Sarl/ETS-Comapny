@@ -13,7 +13,7 @@ import NotFound from './pages/NotFound.jsx';
 import Products from './pages/Products.jsx';
 import References from './pages/References.jsx';
 import Services from './pages/Services.jsx';
-import { site } from './site.js';
+import { canonicalUrl, pageTitle } from './site.js';
 
 function RouteEffects() {
   const { pathname } = useLocation();
@@ -21,9 +21,9 @@ function RouteEffects() {
 
   useEffect(() => {
     const meta = t.meta[pathname] || t.meta.notFound;
-    document.title = `${site.name} | ${meta.title}`;
+    document.title = pageTitle(pathname, meta);
     document.querySelector('meta[name="description"]')?.setAttribute('content', meta.description);
-    document.querySelector('link[rel="canonical"]')?.setAttribute('href', `${site.url}${pathname}`);
+    document.querySelector('link[rel="canonical"]')?.setAttribute('href', canonicalUrl(pathname));
   }, [t, pathname]);
 
   return null;
@@ -53,15 +53,22 @@ function SiteLayout() {
   );
 }
 
+// Shared by the browser (BrowserRouter) and the build-time prerender (StaticRouter).
+export function AppShell() {
+  return (
+    <LanguageProvider>
+      <MotionConfig reducedMotion="user">
+        <RouteEffects />
+        <SiteLayout />
+      </MotionConfig>
+    </LanguageProvider>
+  );
+}
+
 export default function App() {
   return (
     <BrowserRouter>
-      <LanguageProvider>
-        <MotionConfig reducedMotion="user">
-          <RouteEffects />
-          <SiteLayout />
-        </MotionConfig>
-      </LanguageProvider>
+      <AppShell />
     </BrowserRouter>
   );
 }

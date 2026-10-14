@@ -31,17 +31,66 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "ETS Complex Business Center",
-        "description": "Fournitures de bureau, équipements, appui aux marchés publics et commerce général.",
-        "url": "https://etscomplexgroup.com/",
-        "logo": "https://etscomplexgroup.com/icon-512.png",
-        "image": "https://etscomplexgroup.com/images/og-image.jpg",
-        "telephone": "+237675455757",
-        "email": "contact@etscomplexgroup.com",
-        "address": { "@type": "PostalAddress", "streetAddress": "Lieu-dit après les Arcades, B.P. 70", "addressLocality": "Bafoussam", "addressRegion": "Ouest", "addressCountry": "CM" },
-        "openingHours": "Mo-Fr 08:00-17:00",
-        "areaServed": "CM"
+        "@graph": [
+          {
+            "@type": "OfficeEquipmentStore",
+            "@id": "https://etscomplexgroup.com/#business",
+            "name": "ETS Complex Business Center",
+            "alternateName": [
+              "ETS Complex Group",
+              "ETS Complex Business",
+              "Complex Business Center Bafoussam"
+            ],
+            "description": "Fournitures de bureau, mobilier, papeterie, équipements, appui aux marchés publics et commerce général à Bafoussam, Cameroun.",
+            "url": "https://etscomplexgroup.com/",
+            "logo": "https://etscomplexgroup.com/icon-512.png",
+            "image": "https://etscomplexgroup.com/images/og-image.jpg",
+            "telephone": "+237675455757",
+            "email": "contact@etscomplexgroup.com",
+            "foundingDate": "2013",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Lieu-dit après les Arcades, B.P. 70",
+              "addressLocality": "Bafoussam",
+              "addressRegion": "Ouest",
+              "addressCountry": "CM"
+            },
+            "openingHours": "Mo-Fr 08:00-17:00",
+            "areaServed": [
+              {
+                "@type": "City",
+                "name": "Bafoussam"
+              },
+              {
+                "@type": "AdministrativeArea",
+                "name": "Région de l'Ouest"
+              },
+              {
+                "@type": "Country",
+                "name": "Cameroun"
+              }
+            ],
+            "knowsAbout": [
+              "Fournitures de bureau",
+              "Mobilier de bureau",
+              "Papeterie",
+              "Marchés publics",
+              "Tables-bancs",
+              "Commerce général"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://etscomplexgroup.com/#website",
+            "url": "https://etscomplexgroup.com/",
+            "name": "ETS Complex Business Center",
+            "alternateName": "ETS Complex Group",
+            "inLanguage": "fr",
+            "publisher": {
+              "@id": "https://etscomplexgroup.com/#business"
+            }
+          }
+        ]
       }
     </script>
   </head>
