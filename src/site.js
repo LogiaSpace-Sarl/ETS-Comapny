@@ -5,7 +5,7 @@ const phoneDigits = '237675455757';
 
 export const site = {
   name: 'ETS Complex Business Center',
-  url: 'https://www.etscomplexebusiness.com',
+  url: 'https://etscomplexgroup.com',
   phone: '675 45 57 57',
   phoneHref: `tel:+${phoneDigits}`,
   whatsappNumber: phoneDigits,
