@@ -31,7 +31,6 @@ export default function Header() {
       <div className="topline">
         <div className="container topline-inner">
           <span><MapPin size={13} aria-hidden="true" />{t.common.location}</span>
-          <span className="topline-note">{t.common.banner}</span>
           <a href={site.phoneHref}><Phone size={13} aria-hidden="true" />{t.common.phone}</a>
         </div>
       </div>
