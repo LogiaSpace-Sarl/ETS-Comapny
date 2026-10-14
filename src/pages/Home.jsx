@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { CountUp, PageTransition, ParallaxImage, Reveal, Stagger, StaggerItem } from '../components/motion.jsx';
 import ProcessSteps from '../components/ProcessSteps.jsx';
@@ -32,15 +32,17 @@ export default function Home() {
           </motion.div>
           <div className="hero-art">
             <motion.div
-              className="hero-photo-frame"
-              initial={{ opacity: 0, scale: 0.96 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, ease, delay: 0.15 }}
+              className="hero-emblem"
+              initial={{ opacity: 0, scale: 0.9, rotate: -6 }}
+              animate={{ opacity: 1, scale: 1, rotate: 0 }}
+              transition={{ duration: 1.1, ease, delay: 0.15 }}
             >
-              <img src="/images/cameroon-business-team.webp" alt={h.imageLabel} width="1600" height="900" fetchpriority="high" />
+              <span className="emblem-ring" aria-hidden="true" />
+              <span className="emblem-ring emblem-ring-inner" aria-hidden="true" />
+              <img src="/images/ets-logo-emblem.webp" alt={h.imageLabel} width="720" height="720" fetchpriority="high" />
             </motion.div>
             <motion.div className="floating-card" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease, delay: 0.7 }}>
-              <img className="floating-logo" src="/images/ets-logo.webp" alt="" width="64" height="64" />
+              <span className="floating-icon"><ShieldCheck size={22} aria-hidden="true" /></span>
               <span><b>{h.trust}</b><small>{h.trustCaption}</small></span>
             </motion.div>
           </div>

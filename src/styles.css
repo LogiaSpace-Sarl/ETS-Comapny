@@ -39,7 +39,7 @@ img { display: block; max-width: 100%; height: auto; }
 .navbar { transition: height .3s ease, box-shadow .3s ease, background .3s ease; height: 86px; position: sticky; top: 0; z-index: 20; background: rgba(251, 250, 246, .96); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(217, 222, 216, .75); }
 .nav-inner { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .brand { display: inline-flex; flex: 0 0 auto; align-items: center; gap: 10px; color: var(--green); line-height: 1; }
-.brand img { width: 47px; height: 47px; border-radius: 50%; object-fit: cover; border: 2px solid var(--green); }
+.brand img { width: 50px; height: 50px; border-radius: 50%; }
 .brand span { font-size: 14px; font-weight: 600; letter-spacing: .1em; }
 .brand b { font-weight: 700; }
 .brand small { display: block; margin-top: 5px; color: var(--muted); font-size: 11px; letter-spacing: .31em; }
@@ -79,9 +79,14 @@ img { display: block; max-width: 100%; height: auto; }
 .hero-photo-frame img { width: 100%; height: 100%; object-fit: cover; object-position: 62% center; }
 
 
-.floating-card { position: absolute; z-index: 2; right: -5px; bottom: 60px; display: flex; align-items: center; gap: 12px; padding: 14px 17px; background: #fff; color: var(--green); box-shadow: 0 14px 28px #063f2c1a; }
+.floating-card { position: absolute; z-index: 2; right: 0; bottom: 40px; display: flex; align-items: center; gap: 12px; padding: 14px 17px; background: #fff; color: var(--green); box-shadow: 0 14px 28px #063f2c1a; }
 .floating-card > svg { color: var(--gold); }
-.floating-logo { width: 64px; height: 64px; flex: 0 0 auto; border-radius: 50%; box-shadow: 0 0 0 3px #fff, 0 0 0 4px #c9974366; }
+.floating-icon { display: grid; width: 46px; height: 46px; flex: 0 0 auto; place-items: center; border-radius: 50%; background: #f4ecd9; color: var(--gold); }
+.hero-emblem { position: relative; display: grid; width: min(100%, 470px); aspect-ratio: 1; place-items: center; }
+.hero-emblem::before { content: ''; position: absolute; inset: 7%; border-radius: 50%; background: radial-gradient(circle, #fff 58%, #ffffff00 71%); }
+.hero-emblem img { position: relative; width: 82%; border-radius: 50%; box-shadow: 0 0 0 10px #ffffffd9, 0 30px 60px #063f2c2b; }
+.emblem-ring { position: absolute; inset: 0; border: 1px solid #c997435c; border-radius: 50%; }
+.emblem-ring-inner { inset: 4.5%; border: 1px dashed #0b5c4140; }
 .floating-card b, .floating-card small { display: block; }
 .floating-card b { font-size: 15px; }
 .floating-card small { margin-top: 2px; color: var(--muted); font-size: 13px; }
@@ -207,7 +212,7 @@ img { display: block; max-width: 100%; height: auto; }
 .form-note { margin: 14px 0 0; color: #5f6d66; font-size: 14px; }
 
 .footer-brand { display: inline-flex; align-items: center; gap: 10px; }
-.footer-brand img { width: 37px; height: 37px; border-radius: 50%; object-fit: cover; }
+.footer-brand img { width: 44px; height: 44px; border-radius: 50%; background: #fff; }
 .footer-brand b, .footer-brand small { display: block; }
 .footer-brand b { color: #fff; font-size: 12px; letter-spacing: .1em; }
 .footer-brand small { margin-top: 3px; font-size: 12px; }
@@ -310,7 +315,7 @@ img { display: block; max-width: 100%; height: auto; }
   .hero { padding-top: 50px; }
   .hero-grid { grid-template-columns: 1fr; gap: 28px; }
   .hero-art { min-height: 0; padding: 10px 0 35px; }
-  .hero-photo-frame { width: min(100%, 580px); aspect-ratio: 1.5 / 1; }
+  .hero-emblem { width: min(100%, 380px); }
   .floating-card { right: 5px; bottom: 55px; }
   .photo-caption { bottom: 33px; left: 14px; }
   .hero-copy { padding: 8px 0 10px; }
@@ -350,7 +355,7 @@ img { display: block; max-width: 100%; height: auto; }
   .brand img { width: 42px; height: 42px; }
   .brand span { font-size: 12px; }
   .hero { padding-top: 34px; }
-  .hero-photo-frame { width: 100%; aspect-ratio: 1.12 / 1; border-width: 7px; }
+  .hero-emblem { width: min(100%, 320px); }
   .floating-card { right: 0; bottom: 55px; padding: 11px 12px; }
   .floating-card b { font-size: 15px; }
   .floating-card small { font-size: 11px; }

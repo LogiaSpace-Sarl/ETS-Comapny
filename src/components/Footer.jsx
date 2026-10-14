@@ -21,7 +21,7 @@ export default function Footer() {
       <div className="container footer-grid">
         <div className="footer-about">
           <Link className="footer-brand" to="/">
-            <img src="/images/ets-logo.webp" alt="" width="56" height="56" loading="lazy" />
+            <img src="/images/ets-logo-emblem-small.webp" alt="" width="56" height="56" loading="lazy" />
             <span><b>ETS COMPLEX BUSINESS CENTER</b><small>{t.common.footerLine}</small></span>
           </Link>
           <p>{f.about}</p>
