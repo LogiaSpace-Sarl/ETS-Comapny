@@ -67,8 +67,6 @@ export const content = {
       values: ['Ancrage local', 'Clarté'],
       allServices: 'Voir tous nos services',
       allProducts: 'Voir les produits',
-      marquee: ['Mobilier de bureau', 'Papeterie', 'Classement & archivage', 'Tables-bancs', 'Consommables', 'Équipements', 'Marchés publics', 'Commerce général'],
-      trustItems: ['Entreprise immatriculée au RCCM', 'Factures pro forma sur demande', 'Réponse claire et rapide', 'Livraison organisée'],
       processKicker: 'Comment ça marche',
       processTitle: 'Trois étapes, sans complication.',
       steps: [
@@ -194,7 +192,6 @@ export const content = {
     footer: {
       about: "Fournitures de bureau, mobilier, équipements et appui aux marchés publics pour les administrations, écoles et entreprises, depuis Bafoussam.",
       pagesTitle: 'Navigation',
-      servicesTitle: 'Services',
       contactTitle: 'Contact',
       legal: 'Entreprise individuelle',
     },
@@ -280,8 +277,6 @@ export const content = {
       values: ['Local roots', 'Clarity'],
       allServices: 'Explore all services',
       allProducts: 'Explore products',
-      marquee: ['Office furniture', 'Stationery', 'Filing & archiving', 'School desks', 'Consumables', 'Equipment', 'Public contracts', 'General trade'],
-      trustItems: ['Registered with the RCCM', 'Pro forma invoices on request', 'Clear, fast answers', 'Organised delivery'],
       processKicker: 'How it works',
       processTitle: 'Three simple steps.',
       steps: [
@@ -401,7 +396,6 @@ export const content = {
     footer: {
       about: 'Office supplies, furniture, equipment and public-contract support for administrations, schools and businesses, from Bafoussam.',
       pagesTitle: 'Navigation',
-      servicesTitle: 'Services',
       contactTitle: 'Contact',
       legal: 'Sole proprietorship',
     },

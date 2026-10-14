@@ -25,16 +25,11 @@ export default function Footer() {
             <span><b>ETS COMPLEX BUSINESS CENTER</b><small>{t.common.footerLine}</small></span>
           </Link>
           <p>{f.about}</p>
-          <Link className="button button-gold" to="/contact">{t.common.requestQuote}</Link>
         </div>
         <nav aria-label={f.pagesTitle}>
           <h2>{f.pagesTitle}</h2>
           <ul>{pages.map(([key, path]) => <li key={key}><Link to={path}>{t.nav[key]}</Link></li>)}</ul>
         </nav>
-        <div>
-          <h2>{f.servicesTitle}</h2>
-          <ul>{t.services.items.map((item) => <li key={item.title}><Link to={`/contact?sujet=${encodeURIComponent(item.title)}`}>{item.title}</Link></li>)}</ul>
-        </div>
         <div>
           <h2>{f.contactTitle}</h2>
           <ul className="footer-contact">
