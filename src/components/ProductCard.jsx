@@ -12,7 +12,7 @@ export default function ProductCard({ item, index, t }) {
       <div className="product-copy">
         <h2>{item.title}</h2>
         <p>{item.body}</p>
-        <Link to="/contact" className="card-link">{t.common.requestQuote}<ArrowRight size={15} aria-hidden="true" /></Link>
+        <Link to={`/contact?sujet=${encodeURIComponent(item.title)}`} className="card-link">{t.common.requestQuote}<ArrowRight size={15} aria-hidden="true" /></Link>
       </div>
     </article>
   );

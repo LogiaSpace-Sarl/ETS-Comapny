@@ -27,6 +27,8 @@ export const content = {
       discuss: 'Discuter de ce service',
       learnMore: 'En savoir plus',
       requestQuote: 'Demander un devis',
+      whatsappLabel: 'Écrire sur WhatsApp',
+      whatsappMessage: 'Bonjour ETS Complexe Business, je souhaite obtenir un devis.',
     },
     home: {
       kicker: "Au service de l'intérêt général",
@@ -41,7 +43,7 @@ export const content = {
       stats: [
         ['15+', "années d'expérience commerciale"],
         ['Bafoussam', 'notre implantation'],
-        ['100%', "à l'écoute de vos besoins"],
+        ['4', "domaines d'expertise"],
       ],
       aboutKicker: 'Une présence de confiance',
       aboutTitle: 'Le partenaire discret derrière les opérations qui avancent.',
@@ -65,6 +67,13 @@ export const content = {
       values: ['Ancrage local', 'Clarté'],
       allServices: 'Voir tous nos services',
       allProducts: 'Voir les produits',
+      processKicker: 'Comment ça marche',
+      processTitle: 'Trois étapes, sans complication.',
+      steps: [
+        { title: 'Vous exprimez votre besoin', body: 'Par le formulaire, par téléphone ou sur WhatsApp : décrivez les produits ou services recherchés, les quantités et vos délais.' },
+        { title: 'Nous vous envoyons un devis', body: 'Nous étudions votre demande et vous proposons une offre claire et détaillée, adaptée à votre organisation.' },
+        { title: 'Nous livrons', body: "Après validation, nous organisons l'approvisionnement et la livraison selon les modalités convenues." },
+      ],
     },
     about: {
       kicker: 'À propos de nous',
@@ -139,6 +148,19 @@ export const content = {
       note: 'Choisissez email ou WhatsApp : votre demande est préparée automatiquement.',
       success: "Si votre messagerie ne s'est pas ouverte, écrivez-nous directement à {email} ou via WhatsApp.",
       sideNote: 'Une réponse claire et adaptée à votre demande.',
+      quoteFor: 'Demande de devis : {item}',
+    },
+    // TODO(client): validate these answers (pro forma, delivery outside Bafoussam).
+    faq: {
+      kicker: 'Questions fréquentes',
+      title: 'Vos questions, nos réponses.',
+      items: [
+        { q: 'Comment obtenir un devis ?', a: 'Remplissez le formulaire, appelez-nous ou écrivez-nous sur WhatsApp en précisant les produits, les quantités et le lieu de livraison. Nous revenons vers vous avec une offre détaillée.' },
+        { q: 'Travaillez-vous avec les administrations et les marchés publics ?', a: "Oui. Nous accompagnons les administrations, établissements scolaires et institutions, de l'expression du besoin jusqu'au devis." },
+        { q: 'Pouvez-vous établir une facture pro forma ?', a: 'Oui, une facture pro forma peut être établie sur la base de votre demande pour faciliter vos démarches internes.' },
+        { q: 'Livrez-vous en dehors de Bafoussam ?', a: 'Nous sommes basés à Bafoussam. Pour une livraison dans une autre ville, indiquez le lieu dans votre demande : les conditions seront précisées dans le devis.' },
+        { q: 'Quand peut-on vous joindre ?', a: 'Du lundi au vendredi, de 08:00 à 17:00. Vous pouvez aussi nous écrire sur WhatsApp ou par email à tout moment.' },
+      ],
     },
     notFound: {
       kicker: 'Erreur 404',
@@ -182,6 +204,8 @@ export const content = {
       discuss: 'Discuss this service',
       learnMore: 'Learn more',
       requestQuote: 'Request a quote',
+      whatsappLabel: 'Chat on WhatsApp',
+      whatsappMessage: 'Hello ETS Complexe Business, I would like to request a quote.',
     },
     home: {
       kicker: 'Serving the public interest',
@@ -196,7 +220,7 @@ export const content = {
       stats: [
         ['15+', 'years of commercial experience'],
         ['Bafoussam', 'our home base'],
-        ['100%', 'focused on your needs'],
+        ['4', 'areas of expertise'],
       ],
       aboutKicker: 'A trusted presence',
       aboutTitle: 'The dependable partner behind work that moves forward.',
@@ -220,6 +244,13 @@ export const content = {
       values: ['Local roots', 'Clarity'],
       allServices: 'Explore all services',
       allProducts: 'Explore products',
+      processKicker: 'How it works',
+      processTitle: 'Three simple steps.',
+      steps: [
+        { title: 'Tell us what you need', body: 'Use the form, call us or message us on WhatsApp: describe the products or services, quantities and timeline.' },
+        { title: 'We send you a quote', body: 'We review your request and send a clear, detailed offer tailored to your organisation.' },
+        { title: 'We deliver', body: 'Once approved, we organise sourcing and delivery according to the agreed terms.' },
+      ],
     },
     about: {
       kicker: 'About us',
@@ -289,6 +320,18 @@ export const content = {
       note: 'Choose email or WhatsApp: your request is prepared automatically.',
       success: "If your email app did not open, write to us directly at {email} or via WhatsApp.",
       sideNote: 'A clear response tailored to your request.',
+      quoteFor: 'Quote request: {item}',
+    },
+    faq: {
+      kicker: 'Frequently asked questions',
+      title: 'Your questions, answered.',
+      items: [
+        { q: 'How do I get a quote?', a: 'Fill in the form, call us or message us on WhatsApp with the products, quantities and delivery location. We will come back to you with a detailed offer.' },
+        { q: 'Do you work with public administrations and public contracts?', a: 'Yes. We support administrations, schools and institutions, from needs assessment to quotation.' },
+        { q: 'Can you issue a pro forma invoice?', a: 'Yes, a pro forma invoice can be issued based on your request to support your internal procedures.' },
+        { q: 'Do you deliver outside Bafoussam?', a: 'We are based in Bafoussam. For delivery to another city, include the location in your request: terms will be specified in the quote.' },
+        { q: 'When can we reach you?', a: 'Monday to Friday, 08:00 to 17:00. You can also message us on WhatsApp or by email at any time.' },
+      ],
     },
     notFound: {
       kicker: 'Error 404',

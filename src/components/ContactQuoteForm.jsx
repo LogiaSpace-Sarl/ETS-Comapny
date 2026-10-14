@@ -1,10 +1,14 @@
 import { useState } from 'react';
 import { MessageCircle, Send } from 'lucide-react';
+import { useSearchParams } from 'react-router-dom';
 import { site, whatsappLink } from '../site.js';
 
 export default function ContactQuoteForm({ t }) {
   const c = t.contact;
   const [submitted, setSubmitted] = useState(false);
+  const [searchParams] = useSearchParams();
+  const requestedItem = searchParams.get('sujet');
+  const defaultSubject = requestedItem ? c.quoteFor.replace('{item}', requestedItem) : '';
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -27,7 +31,7 @@ export default function ContactQuoteForm({ t }) {
         <label>{c.name}<input name="name" autoComplete="name" required placeholder={c.namePlaceholder} /></label>
         <label>{c.email}<input name="email" autoComplete="email" type="email" required placeholder={c.emailPlaceholder} /></label>
       </div>
-      <label>{c.subject}<input name="subject" required placeholder={c.subjectPlaceholder} /></label>
+      <label>{c.subject}<input key={defaultSubject} name="subject" required defaultValue={defaultSubject} placeholder={c.subjectPlaceholder} /></label>
       <label>{c.message}<textarea name="message" required rows="6" placeholder={c.messagePlaceholder} /></label>
       <div className="form-actions">
         <button className="button button-primary" type="submit" value="email">{c.send}<Send size={16} aria-hidden="true" /></button>

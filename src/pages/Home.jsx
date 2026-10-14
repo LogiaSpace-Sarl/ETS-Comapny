@@ -1,5 +1,6 @@
 import { ArrowRight, CheckCircle2, FileText, MapPin, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import ProcessSteps from '../components/ProcessSteps.jsx';
 import ReferenceCard from '../components/ReferenceCard.jsx';
 import ServiceGrid from '../components/ServiceGrid.jsx';
 import { useLanguage } from '../context/LanguageContext.jsx';
@@ -64,7 +65,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section sectors-section">
+      <ProcessSteps kicker={h.processKicker} title={h.processTitle} steps={h.steps} />
+
+      <section className="section sectors-section pale">
         <div className="container">
           <div className="section-heading"><div><div className="eyebrow"><span className="eyebrow-line" />{h.referencesKicker}</div><h2>{h.referencesTitle}</h2></div><p>{h.referencesIntro}</p></div>
           <div className="reference-grid">

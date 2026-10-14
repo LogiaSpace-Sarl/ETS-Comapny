@@ -1,6 +1,7 @@
 import PageHero from '../components/PageHero.jsx';
 import ContactDetails from '../components/ContactDetails.jsx';
 import ContactQuoteForm from '../components/ContactQuoteForm.jsx';
+import Faq from '../components/Faq.jsx';
 import { useLanguage } from '../context/LanguageContext.jsx';
 
 export default function Contact() {
@@ -16,6 +17,7 @@ export default function Contact() {
           <ContactQuoteForm t={t} />
         </div>
       </section>
+      <Faq faq={t.faq} />
     </main>
   );
 }

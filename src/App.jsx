@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import Footer from './components/Footer.jsx';
 import Header from './components/Header.jsx';
+import WhatsAppButton from './components/WhatsAppButton.jsx';
 import { LanguageProvider, useLanguage } from './context/LanguageContext.jsx';
 import About from './pages/About.jsx';
 import Contact from './pages/Contact.jsx';
@@ -41,6 +42,7 @@ function SiteLayout() {
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }
