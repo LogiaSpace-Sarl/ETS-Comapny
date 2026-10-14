@@ -53,7 +53,7 @@ public/images/                 # Local logo and site/product imagery
 - Uses React, Vite, React Router, and Lucide icons; **pnpm is not required**.
 - The logo and website imagery are bundled in `public/images/` and load locally.
 - The shared navigation language toggle switches between French and English; the selection is saved in the browser.
-- Site: **https://etscomplexgroup.com**. Contact details (phone **675 45 57 57**, email **contact@etscomplexgroup.com**, RCCM) live in `src/site.js`.
+- Site: **https://www.etscomplexgroup.com**. Contact details (phone **675 45 57 57**, email **contact@etscomplexgroup.com**, RCCM) live in `src/site.js`.
 - The quote form opens either a pre-addressed email draft or a WhatsApp conversation. Deployment rewrites are configured in `vercel.json` (Vercel) and `public/_redirects` (Netlify).
 
 ## Scripts

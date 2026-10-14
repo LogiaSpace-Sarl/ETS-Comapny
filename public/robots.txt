@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://etscomplexgroup.com/sitemap.xml
+Sitemap: https://www.etscomplexgroup.com/sitemap.xml
