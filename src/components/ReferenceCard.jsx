@@ -7,7 +7,7 @@ export default function ReferenceCard({ title, index, status }) {
       <span className="reference-number">{number}</span>
       <div className="reference-icon"><Building2 size={22} strokeWidth={1.6} aria-hidden="true" /></div>
       <h2>{title}</h2>
-      <p>{status}</p>
+      {status && <p>{status}</p>}
     </article>
   );
 }
