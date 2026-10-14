@@ -39,7 +39,7 @@ export default function Home() {
             >
               <span className="emblem-ring" aria-hidden="true" />
               <span className="emblem-ring emblem-ring-inner" aria-hidden="true" />
-              <img src="/images/ets-logo-emblem.webp" alt={h.imageLabel} width="720" height="720" fetchpriority="high" />
+              <img src="/images/ets-logo-emblem.webp" alt={h.imageLabel} width="720" height="720" fetchPriority="high" />
             </motion.div>
             <motion.div className="floating-card" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease, delay: 0.7 }}>
               <span className="floating-icon"><ShieldCheck size={22} aria-hidden="true" /></span>
