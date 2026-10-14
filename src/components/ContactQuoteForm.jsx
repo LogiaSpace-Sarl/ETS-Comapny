@@ -1,17 +1,28 @@
 import { useState } from 'react';
-import { Send } from 'lucide-react';
+import { MessageCircle, Send } from 'lucide-react';
+import { useSearchParams } from 'react-router-dom';
+import { site, whatsappLink } from '../site.js';
 
 export default function ContactQuoteForm({ t }) {
   const c = t.contact;
   const [submitted, setSubmitted] = useState(false);
+  const [searchParams] = useSearchParams();
+  const requestedItem = searchParams.get('sujet');
+  const defaultSubject = requestedItem ? c.quoteFor.replace('{item}', requestedItem) : '';
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = new FormData(event.currentTarget);
-    const subject = encodeURIComponent(`${form.get('subject')} — ${form.get('name')}`);
-    const body = encodeURIComponent(`${c.name}: ${form.get('name')}\n${c.email}: ${form.get('email')}\n\n${form.get('message')}`);
+    const channel = event.nativeEvent.submitter?.value;
+    const subject = `${form.get('subject')} — ${form.get('name')}`;
+    const body = `${c.name}: ${form.get('name')}\n${c.email}: ${form.get('email')}\n\n${form.get('message')}`;
     setSubmitted(true);
-    window.location.href = `mailto:${t.common.email}?subject=${subject}&body=${body}`;
+
+    if (channel === 'whatsapp') {
+      window.open(whatsappLink(`${subject}\n\n${body}`), '_blank', 'noopener');
+    } else {
+      window.location.href = `mailto:${site.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    }
   };
 
   return (
@@ -20,10 +31,13 @@ export default function ContactQuoteForm({ t }) {
         <label>{c.name}<input name="name" autoComplete="name" required placeholder={c.namePlaceholder} /></label>
         <label>{c.email}<input name="email" autoComplete="email" type="email" required placeholder={c.emailPlaceholder} /></label>
       </div>
-      <label>{c.subject}<input name="subject" required placeholder={c.subjectPlaceholder} /></label>
+      <label>{c.subject}<input key={defaultSubject} name="subject" required defaultValue={defaultSubject} placeholder={c.subjectPlaceholder} /></label>
       <label>{c.message}<textarea name="message" required rows="6" placeholder={c.messagePlaceholder} /></label>
-      <button className="button button-primary" type="submit">{c.send}<Send size={16} aria-hidden="true" /></button>
-      <p className="form-note">{submitted ? c.success : c.note}</p>
+      <div className="form-actions">
+        <button className="button button-primary" type="submit" value="email">{c.send}<Send size={16} aria-hidden="true" /></button>
+        <button className="button button-whatsapp" type="submit" value="whatsapp">{c.whatsapp}<MessageCircle size={16} aria-hidden="true" /></button>
+      </div>
+      <p className="form-note" role="status">{submitted ? c.success.replace('{email}', site.email) : c.note}</p>
     </form>
   );
 }

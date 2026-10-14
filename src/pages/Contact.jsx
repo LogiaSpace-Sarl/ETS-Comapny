@@ -1,6 +1,8 @@
+import { PageTransition } from '../components/motion.jsx';
 import PageHero from '../components/PageHero.jsx';
 import ContactDetails from '../components/ContactDetails.jsx';
 import ContactQuoteForm from '../components/ContactQuoteForm.jsx';
+import Faq from '../components/Faq.jsx';
 import { useLanguage } from '../context/LanguageContext.jsx';
 
 export default function Contact() {
@@ -8,7 +10,7 @@ export default function Contact() {
   const contact = t.contact;
 
   return (
-    <main>
+    <PageTransition>
       <PageHero kicker={contact.kicker} title={contact.title} intro={contact.intro} />
       <section className="section inner-section">
         <div className="container contact-layout">
@@ -16,6 +18,7 @@ export default function Contact() {
           <ContactQuoteForm t={t} />
         </div>
       </section>
-    </main>
+      <Faq faq={t.faq} />
+    </PageTransition>
   );
 }
