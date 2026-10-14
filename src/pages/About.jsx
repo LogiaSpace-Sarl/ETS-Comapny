@@ -58,7 +58,7 @@ export default function About() {
             <Link className="button button-gold" to="/contact">{t.common.requestQuote}<ArrowRight size={16} aria-hidden="true" /></Link>
           </Reveal>
           <Reveal className="city-visual" delay={0.15}>
-            <ParallaxImage src="/images/bafoussam-city.webp" alt={about.cityTitle} loading="lazy" strength={30} />
+            <ParallaxImage src="/images/cameroon-business-team.webp" alt={about.cityTitle} loading="lazy" strength={30} />
             <iframe
               className="city-map"
               title={about.mapTitle}
