@@ -67,7 +67,9 @@ export function CountUp({ value, duration = 1600 }) {
     return () => cancelAnimationFrame(frameId);
   }, [inView]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const display = !match || reduceMotion ? value : `${current ?? 0}${match[2]}`;
+  // The build-time prerender (no window) keeps the real value for search engines.
+  const isServer = typeof window === 'undefined';
+  const display = !match || reduceMotion || (isServer && current === null) ? value : `${current ?? 0}${match[2]}`;
   return <span ref={ref} className="count-up">{display}</span>;
 }
 

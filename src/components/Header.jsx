@@ -37,7 +37,7 @@ export default function Header() {
       <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="container nav-inner">
           <Link className="brand" to="/" aria-label={t.nav.homeLabel}>
-            <img src="/images/ets-logo.webp" alt="" width="52" height="52" />
+            <img src="/images/ets-logo-emblem-small.webp" alt="" width="52" height="52" />
             <span>ETS <b>COMPLEX</b><small>BUSINESS CENTER</small></span>
           </Link>
           <nav className={`nav-links ${menuOpen ? 'open' : ''}`} aria-label={t.nav.mainNav}>
